@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>실습!</title>
+    <style>
+      span {
+        color: #ff0000;
+      }
+      div.line {
+        padding: 10px;
+        border: 1px solid #000;
+      }
+      .blue_line{border: 1px solid blue;}
+      .green_line{border: 1px solid green;}
+      .red_line{border: 1px solid red;}
+      .red_font{color:red}
+      .blue_font{color: blue;}
+      .green_font{color: green;}
+      .blue_bg{background-color: blue;}
+      .red_bg{background-color: red;}
+    </style>
+  </head>
+  <body>
+    <h1>안녕하세요 실습 첫페이지네요</h1>
+    <p>실습 첫번쨰 단락이구요</p>
+    <p>p단위로 단락을 끊을 수 있고요</p>
+    <p>세번째 단락이 되겠네요 그리고 <span>이건 span태그</span>구요</p>
+
+    <h3>
+      1. HTML 제목은 &lt;h1&gt;~&lt;h6&gt; 태그로 정의됩니다.<br />&lt;h1&gt;은
+      가장 중요한 제목을 &lt;h6&gt;는 가장 중요하지 않은 제목을 정의합니다.
+    </h3>
+    <div class="line">
+      <h1>This is heading 1</h1>
+      <h2>This is heading 2</h2>
+      <h3>This is heading 3</h3>
+    </div>
+
+    <h3>2. 단락은 &lt;p&gt;태그로 정의됩니다.</h3>
+    <div class="line">
+      <p>This is paragraph.</p>
+      <p>This is another paragraph.</p>
+    </div>
+
+    <h3>3. 링크는 &lt;a&gt;태그로 정의됩니다.</h3>
+    <div class="line">
+      <a href="https://www.naver.com/" target="_blank">This is naver link.</a>
+    </div>
+    <h3>
+      4. 이미지는 &lt;img&gt;태그로 정의됩니다. 소스파일(src), 대체 텍스트(alt),
+      너비 및 높이가 속성으로 제공됩니다.
+    </h3>
+    <div class="line">
+      <img
+        src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTWs_TGPYcb5OY5UEF36d-wX-jDepQ4TdiHfA&usqp=CAU"
+      />
+    </div>
+    <h1>장바구니 목록</h1>
+    <div class="line">
+      <ul>
+        <li>사과</li>
+        <li>딸기</li>
+        <li>바나나</li>
+      </ul>
+      <table>
+        <thead>
+          <tr>
+            <th>과일</th>
+            <th>수량</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>사과</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>딸기</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>바나나</td>
+            <td>3</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <h3>Input 폼</h3>
+    <div class="line">
+      <form>
+        <p>
+          <label for="label1">이름 : </label
+          ><input type="text" id="label1" required />
+        </p>
+        <p>
+          <label for="label2">이메일 : </label
+          ><input type="email" id="label2" required />
+        </p>
+        <p>
+          <label for="label3">비밀번호 : </label
+          ><input type="password" id="label3" required />
+        </p>
+        <br /><br />
+        <input type="submit" value="가입하기" />
+      </form>
+    </div>
+
+    <!-- Hello World -->
+    <h2 class="blue_bg">Hello World</h2>
+    <p class="red_bg">hello world</p>
+    <h2 class="red_font">Hello World</h2>
+    <p class="blue_font">Hello world</p>
+    <p class="green_font">HEllo World</p>
+    <h2 class="line red_line">Hello World</p>
+    <h2 class="line blue_line">Hello World</p>
+    <h2 class="line green_line">Hello World</p>
+  </body>
+</html>
