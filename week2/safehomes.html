@@ -3,12 +3,19 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="safehomes.css" />
+    <link rel="stylesheet" href="reset.css" />
+    <link
+      href="//spoqa.github.io/spoqa-han-sans/css/SpoqaHanSansNeo.css"
+      rel="stylesheet"
+      type="text/css"
+    />
     <title>세이프홈즈</title>
   </head>
   <body>
     <header>
-      <h1 class="logo">세이프홈즈</h1>
-      <div>
+      <h1 class="logo"><span class="hidden">세이프홈즈</span></h1>
+      <div class="menu">
         <a href="#">문의하기</a>
         <button type="button">시작하기</button>
       </div>
@@ -16,8 +23,10 @@
     <main>
       <section class="full_width">
         <div class="main_visual">
-          <h2>내 집 보증금,<br />경매로 날아가면 어떡하지?</h2>
-          <a href="#">지금 걱정 해결하기</a>
+          <div class="main_content">
+            <h2>내 집 보증금,<br />경매로 날아가면 어떡하지?</h2>
+            <a href="#">지금 걱정 해결하기</a>
+          </div>
         </div>
       </section>
       <section>
@@ -27,7 +36,7 @@
           </h2>
           <div class="safe-about__cont">
             <div class="safe-card">
-              <img />
+              <img src="images/safe-about01.svg" />
               <div class="safe-card__desc">
                 <strong
                   >등기부등본 등을 분석한<br />보증금 지킴이 리포트</strong
@@ -39,9 +48,9 @@
               </div>
             </div>
             <div class="safe-card">
-              <img />
+              <img src="images/safe-about02.svg" />
               <div class="safe-card__desc">
-                <strong>보증금 보호를 위한 Check-List</strong>
+                <strong>보증금 보호를 위한<br />Check-List</strong>
                 <p>
                   내 보증금을 어떻게 지킬 수 있을까?라는 단계를 거쳐서
                   여러분들에게 계약전 보증금 지킴이 리포트 제공
@@ -49,9 +58,9 @@
               </div>
             </div>
             <div class="safe-card">
-              <img />
+              <img src="images/safe-about03.svg" />
               <div class="safe-card__desc">
-                <strong>등기부등본 변동에 따른 실시간 알림 서비스</strong>
+                <strong>등기부등본 변동에<br />따른 실시간 알림 서비스</strong>
                 <p>
                   내 보증금을 어떻게 지킬 수 있을까?라는 단계를 거쳐서
                   여러분들에게 계약전 보증금 지킴이 리포트 제공
@@ -65,7 +74,7 @@
           <h2><strong>부동산을 찾았지만 망설이고 계시나요?</strong></h2>
           <div class="safe-about__cont">
             <div class="safe-card">
-              <img />
+              <img src="images/safe-about04.svg" />
               <div class="safe-card__desc">
                 <strong
                   >부동산 중개 업자는 항상 괜찮다고 한다. 과연 그럴까?</strong
@@ -77,7 +86,7 @@
               </div>
             </div>
             <div class="safe-card">
-              <img />
+              <img src="images/safe-about05.svg" />
               <div class="safe-card__desc">
                 <strong
                   >절차가 이것저것 너무 많은데 빠뜨린 절차가 있지
@@ -90,7 +99,7 @@
               </div>
             </div>
             <div class="safe-card">
-              <img />
+              <img src="images/safe-about06.svg" />
               <div class="safe-card__desc">
                 <strong
                   >평생 힘들게 모은 보증금을 나중에 돌려 받지 못 하면 ..</strong
@@ -107,7 +116,7 @@
           <h2>
             세이프홈즈, <strong>어떻게 내 보증금을 지킬 수 있을까요?</strong>
           </h2>
-          <div class="safe-about__cont">
+          <div class="safe-about__cont grid">
             <div class="safe-num">
               <p class="safe-num__num">#1</p>
               <strong class="safe-num__title">계약 전 주소 검색</strong>
@@ -157,7 +166,7 @@
       <section>
         <div class="safe-half">
           <div class="safe-half__img">
-            <img />
+            <img src="images/device01.svg" />
           </div>
           <div class="safe-half__cont">
             <p class="safe-half__h2">리포트</p>
@@ -172,7 +181,7 @@
         </div>
         <div class="safe-half">
           <div class="safe-half__img">
-            <img />
+            <img src="images/device02.svg" />
           </div>
           <div class="safe-half__cont">
             <p class="safe-half__h2">절차</p>
@@ -187,7 +196,7 @@
         </div>
         <div class="safe-half">
           <div class="safe-half__img">
-            <img />
+            <img src="images/device03.svg" />
           </div>
           <div class="safe-half__cont">
             <p class="safe-half__h2">알림</p>

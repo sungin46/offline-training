@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vanilla JS 예제</title>
+  </head>
+  <body>
+    <p id="demo"></p>
+    <button type="button" onclick="demoFunc">Try it</button>
+    <p id="hello"></p>
+    <script>
+      // innerHTML 변경
+      const demoFunc = () => {
+        return (document.getElementById("demo").innerHTML =
+          "Paragraph changed.");
+      };
+
+      // let과 const
+      let x = 5 + 5;
+      let y = "5" + 5;
+      let z = "HEllo" + 5;
+      console.log(x);
+      console.log(y);
+      console.log(z);
+
+      //데이터 유형
+      //numbers
+      let length = 16;
+      let weight = 7.5;
+      //Strings
+      let color = "Yellow";
+      let lastName = "Jason";
+      //Booleans
+      let xx = true;
+      let yy = false;
+      //Object
+      const person = { firstName: "John", lastName: "Doe" };
+      //Array object
+      const cars = ["Saab", "Volvo", "BMW"];
+      //Date object
+      const date = new Date("2023-06-16");
+      //객체 정의
+      const sungin = {
+        firstName: "Hong",
+        lastName: "Sungin",
+        birth: "1996-04-06",
+        age: "28",
+        height: "180",
+        weight: "63",
+        fullName: function () {
+          return this.firstName + " " + this.lastName;
+        },
+      };
+      console.log(sungin);
+      const hello = document.getElementById("hello");
+
+      //자바스크립트 문자열 메소드
+      let text = "ASEDOFNJQENFINWEFNIKQEJNDOQJD";
+      let txtlength = text.length;
+      console.log(txtlength);
+
+      let fruit = "Apple, Banana, Kiwi";
+      let part = fruit.slice(7, 13);
+      console.log(part);
+
+      let micro = "Please visit Microsoft!";
+      let newMicro = text.replace("Microsoft", "W3Schools");
+      console.log(newMicro);
+
+      let test1 = "Hello World!";
+      let test1upp = test1.toUpperCase();
+      let test1low = test1.toLowerCase();
+      let test2 = "Hello";
+      let test3 = "World!";
+      let testcon = test2.concat(" ", test3);
+
+      let txttest = "Please locate where 'loacate' occurs!";
+      let index = txttest.lastIndexOf("Hong");
+      let index2 = txttest.indexOf("loacte", 9);
+
+      //템플릿 리터럴
+      let template = `Welcome ${sungin.firstName}, ${sungin.lastName}!`;
+    </script>
+  </body>
+</html>
