@@ -10,6 +10,7 @@
       rel="stylesheet"
       type="text/css"
     />
+    <link rel="stylesheet" href="safemedia.css" />
     <title>세이프홈즈</title>
   </head>
   <body>
@@ -68,7 +69,7 @@
               </div>
             </div>
           </div>
-          <button type="button">지금 바로 사용하기</button>
+          <button type="button" class="pc">지금 바로 사용하기</button>
         </div>
         <div class="safe-about">
           <h2><strong>부동산을 찾았지만 망설이고 계시나요?</strong></h2>
@@ -171,7 +172,7 @@
           <div class="safe-half__cont">
             <p class="safe-half__h2">리포트</p>
             <strong class="safe-half__title"
-              >등기부 등본 등을 분석한 보증금 지킴이 리포트</strong
+              >등기부 등본 등을 분석한<br />보증금 지킴이 리포트</strong
             >
             <p>
               어려운 부동산 법률 용어가 아닌, 누구나 쉽게 이해 할 수 있는 보증금
@@ -186,7 +187,7 @@
           <div class="safe-half__cont">
             <p class="safe-half__h2">절차</p>
             <strong class="safe-half__title"
-              >보증금 보호를 위한, 체크리스트</strong
+              >보증금 보호를 위한,<br />체크리스트</strong
             >
             <p>
               전세 사기 당하지 않기 위해 반드시 확인해야 할 체크리스트를
@@ -201,7 +202,7 @@
           <div class="safe-half__cont">
             <p class="safe-half__h2">알림</p>
             <strong class="safe-half__title"
-              >등기부 등본 변동에 따른 실시간 알리미</strong
+              >등기부 등본 변동에 따른<br />실시간 알리미</strong
             >
             <p>
               어떤 말도 듣지 못 했는데 집 주인이 바뀌었다고? 세이프홈즈가 즉각
@@ -210,10 +211,12 @@
             <div class="safe-half__msgs">
               <div class="safe-msg">
                 <div class="safe-msg__top">
-                  <p>세이프홈즈</p>
+                  <p class="safe-msg__name">
+                    <img src="images/icn-msg.svg" />세이프홈즈
+                  </p>
                   <p>now</p>
                 </div>
-                <div class="safe-msg-bottom">
+                <div class="safe-msg__bottom">
                   <strong>등기부 등본이 변동되었어요!</strong>
                   <p>
                     방금 전 등기부 등본이 변경되었는데, 세이프홈즈와 함께 같이
@@ -221,12 +224,14 @@
                   </p>
                 </div>
               </div>
-              <div class="safe-msg">
+              <div class="safe-msg masking">
                 <div class="safe-msg__top">
-                  <p>세이프홈즈</p>
+                  <p class="safe-msg__name">
+                    <img src="images/icn-msg.svg" />세이프홈즈
+                  </p>
                   <p>now</p>
                 </div>
-                <div class="safe-msg-bottom">
+                <div class="safe-msg__bottom">
                   <strong>헉! 방금 무언가 변경되었는데요?</strong>
                   <p>
                     세이프홈즈가 방금 등기부 등본이 변경된 사실을 알아냈어요!
@@ -239,67 +244,110 @@
         </div>
       </section>
       <section>
-        <h2>세이프홈즈, <strong>서비스 가격은 어떻게 될까요?</strong></h2>
         <div class="safe-price">
-          <div class="safe-card">
-            <p class="safe-card__title">전/월세 보증금 지킴이 리포트</p>
-            <p class="safe-card__desc">
-              해당 플랜은 여러분을 위해 리포트를 제공합니다. 실제로 이 리포트는
-              언제 어디서든지 사용할 수 있고 그렇습니다.
-            </p>
-            <strong class="safe-card__price">80,000 KRW</strong>
-            <p class="safe-card__period">1회 50,000원 / 1주 80,000원</p>
-            <button type="submit">지금 바로 사용하기</button>
+          <h2>세이프홈즈, <strong>서비스 가격은 어떻게 될까요?</strong></h2>
+          <div class="safe-price__card">
+            <div class="safe-card price">
+              <p class="safe-card__title">전/월세 보증금<br />지킴이 리포트</p>
+              <p class="safe-card__desc">
+                해당 플랜은 여러분을 위해 리포트를 제공합니다. 실제로 이
+                리포트는 언제 어디서든지 사용할 수 있고 그렇습니다.
+              </p>
+              <strong class="safe-card__price">80,000 KRW</strong>
+              <p class="safe-card__period">1회 50,000원 / 1주 80,000원</p>
+              <button type="submit">지금 바로 사용하기</button>
+            </div>
+            <div class="safe-card price">
+              <p class="safe-card__title">등기부 등본 변동<br />알림 서비스</p>
+              <p class="safe-card__desc">
+                해당 플랜은 여러분을 위해 리포트를 제공합니다. 실제로 이
+                리포트는 언제 어디서든지 사용할 수 있고 그렇습니다.
+              </p>
+              <strong class="safe-card__price">50,000 KRW</strong>
+              <p class="safe-card__period">1년 50,000원 / 2년 80,000원</p>
+              <button type="submit">지금 바로 사용하기</button>
+            </div>
+            <div class="safe-card price">
+              <p class="safe-card__title">
+                올 패키지<br />(지킴이 리포트 + 알림)
+              </p>
+              <p class="safe-card__desc">
+                해당 플랜은 여러분을 위해 리포트를 제공합니다. 실제로 이
+                리포트는 언제 어디서든지 사용할 수 있고 그렇습니다.
+              </p>
+              <strong class="safe-card__price">100,000 KRW</strong>
+              <p class="safe-card__period">1주 + 2년 100,000원</p>
+              <button type="submit">지금 바로 사용하기</button>
+            </div>
           </div>
-          <div class="safe-card">
-            <p class="safe-card__title">등기부 등본 변동 알림 서비스</p>
-            <p class="safe-card__desc">
-              해당 플랜은 여러분을 위해 리포트를 제공합니다. 실제로 이 리포트는
-              언제 어디서든지 사용할 수 있고 그렇습니다.
-            </p>
-            <strong class="safe-card__price">50,000 KRW</strong>
-            <p class="safe-card__period">1년 50,000원 / 2년 80,000원</p>
-            <button type="submit">지금 바로 사용하기</button>
-          </div>
-          <div class="safe-card">
-            <p class="safe-card__title">올 패키지 (지킴이 리포트 + 알림)</p>
-            <p class="safe-card__desc">
-              해당 플랜은 여러분을 위해 리포트를 제공합니다. 실제로 이 리포트는
-              언제 어디서든지 사용할 수 있고 그렇습니다.
-            </p>
-            <strong class="safe-card__price">100,000 KRW</strong>
-            <p class="safe-card__period">1주 + 2년 100,000원</p>
-            <button type="submit">지금 바로 사용하기</button>
-          </div>
+          <button type="button">원하시는 플랜이 없다면 문의주세요!</button>
         </div>
-        <button>조금 더 알아보기</button>
       </section>
       <section class="full_width">
         <div class="safe-review">
           <h2>세이프홈즈, <strong>없었으면 큰일 날 뻔했어요!</strong></h2>
           <div class="safe-review__card">
-            <div class="safe-card review">
-              <div class="safe-card__profile">
-                <img />
-                <div class="safe-card__member">
-                  <strong>홍길동님</strong>
-                  <p>전/월세 보증금 지킴이 리포트</p>
+            <div class="safe-review__slide">
+              <div class="safe-card review">
+                <div class="safe-card__profile">
+                  <img src="images/profile01.svg" />
+                  <div class="safe-card__member">
+                    <strong>홍길동님</strong>
+                    <p>전/월세 보증금 지킴이 리포트</p>
+                  </div>
+                </div>
+                <div class="safe-card__cont">
+                  <p>
+                    공인중개사가 계약을 너무 서두르는 느낌이 들어 불안했는데,
+                    세이프홈즈를 통해서 리포트를 받아보니 아니나 다를까
+                    위험요소가 너무 큰 매물이었습니다. 근저당이 너무 높게
+                    잡혀있었고, 보증보험 적합 대상도 아니라 경매로 넘어가게 되면
+                    보증금을 돌려받기 힘들 것 같아 해당 매물 계약을 포기하고, 더
+                    안전한 매물을 찾아서 계약할 수 있었습니다.
+                  </p>
                 </div>
               </div>
-              <div class="safe-card__cont">
-                <p>
-                  공인중개사가 계약을 너무 서두르는 느낌이 들어 불안했는데,
-                  세이프홈즈를 통해서 리포트를 받아보니 아니나 다를까 위험요소가
-                  너무 큰 매물이었습니다. 근저당이 너무 높게 잡혀있었고,
-                  보증보험 적합 대상도 아니라 경매로 넘어가게 되면 보증금을
-                  돌려받기 힘들 것 같아 해당 매물 계약을 포기하고, 더 안전한
-                  매물을 찾아서 계약할 수 있었습니다.
-                </p>
+              <div class="safe-card review">
+                <div class="safe-card__profile">
+                  <img src="images/profile01.svg" />
+                  <div class="safe-card__member">
+                    <strong>홍길동님</strong>
+                    <p>전/월세 보증금 지킴이 리포트</p>
+                  </div>
+                </div>
+                <div class="safe-card__cont">
+                  <p>
+                    공인중개사가 계약을 너무 서두르는 느낌이 들어 불안했는데,
+                    세이프홈즈를 통해서 리포트를 받아보니 아니나 다를까
+                    위험요소가 너무 큰 매물이었습니다. 근저당이 너무 높게
+                    잡혀있었고, 보증보험 적합 대상도 아니라 경매로 넘어가게 되면
+                    보증금을 돌려받기 힘들 것 같아 해당 매물 계약을 포기하고, 더
+                    안전한 매물을 찾아서 계약할 수 있었습니다.
+                  </p>
+                </div>
+              </div>
+              <div class="safe-card review">
+                <div class="safe-card__profile">
+                  <img src="images/profile02.svg" />
+                  <div class="safe-card__member">
+                    <strong>홍길동님</strong>
+                    <p>등기부 등본 변동 알림 서비스</p>
+                  </div>
+                </div>
+                <div class="safe-card__cont">
+                  <p>
+                    첫 부동산 계약이라 확인해야할 것이 중구난방이어서
+                    불안했어요. 인터넷과 공인중개사에게 확인을 했지만 그래도
+                    불안했어요. 내 전재산인데... 그런데 세이프홈즈에는 확인해야
+                    할 것이 쉽게 나와있어서 준비물 준비하듯이 착착 할 수
+                    있었습니다. 부동산 잘 아는 친구가 생긴 것 같아 좋았습니다.
+                  </p>
+                </div>
               </div>
             </div>
           </div>
+          <button type="button">후기 진위여부 파악하러 가기</button>
         </div>
-        <button>후기 진위여부 확인하기</button>
       </section>
       <section class="full_width">
         <div class="safe-start">

@@ -1,0 +1,139 @@
+@media (max-width: 1024px) {
+  header .menu a {
+    display: none;
+  }
+  .main_visual {
+    height: 409px;
+  }
+  .main_content h2 {
+    margin-bottom: 0;
+    font-size: 48px;
+  }
+  .main_content a {
+    display: none;
+  }
+
+  /* safe-about */
+  .safe-about:first-child {
+    margin-bottom: 148px;
+  }
+  .safe-about:nth-child(2) {
+    margin-bottom: 149px;
+  }
+  .safe-about h2 {
+    font-size: 32px;
+  }
+  .safe-about .safe-about__cont {
+    justify-items: center;
+    grid-template-columns: repeat(auto-fill, minmax(calc(50% - 50px), auto));
+  }
+  .safe-about button.pc {
+    display: none;
+  }
+  .safe-num {
+    max-width: 293px;
+  }
+
+  /* safe-half */
+  .safe-half,
+  .safe-half:nth-child(even) {
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  .safe-half {
+    margin-bottom: 147px;
+  }
+  .safe-half__cont {
+    text-align: center;
+  }
+  .safe-half .safe-half__img,
+  .safe-half .safe-half__cont {
+    width: 80%;
+  }
+  .safe-half .safe-half__cont p {
+    margin-bottom: 25px;
+  }
+  .safe-half__msgs {
+    display: none;
+  }
+  .safe-price .safe-price__card {
+    grid-template-columns: repeat(2, 1fr);
+    justify-items: center;
+  }
+  .safe-card.price {
+    max-width: 340px;
+  }
+  .safe-card.review {
+    margin: 0 16px;
+  }
+}
+@media (max-width: 768px) {
+  .main_visual {
+    height: 307px;
+  }
+  .main_content h2 {
+    font-size: 36px;
+  }
+  section {
+    margin-bottom: 84px;
+  }
+  .safe-about:first-child {
+    margin-bottom: 132px;
+  }
+  .safe-about:nth-child(2) {
+    margin-bottom: 133px;
+  }
+  .safe-review__card .safe-review__slide {
+    width: 300%;
+    margin-left: -100%;
+  }
+  .safe-review__card::before,
+  .safe-review__card::after {
+    display: none;
+  }
+  .safe-card.review {
+    max-width: unset;
+  }
+}
+@media (max-width: 480px) {
+  .main_visual {
+    height: 192px;
+  }
+  .main_content h2 {
+    font-size: 24px;
+  }
+  section {
+    margin-bottom: 64px;
+  }
+  .safe-about:first-child {
+    margin-bottom: 84px;
+  }
+  .safe-about:nth-child(2) {
+    margin-bottom: 88px;
+  }
+  .safe-about h2 {
+    margin-bottom: 42px;
+    font-size: 21px;
+  }
+  .safe-about .safe-about__cont {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .safe-half .safe-half__cont .safe-half__title {
+    font-size: 36px;
+  }
+  .safe-half .safe-half__img,
+  .safe-half .safe-half__cont {
+    width: 100%;
+  }
+  .safe-price h2 {
+    font-size: 24px;
+    line-height: 28.8px;
+  }
+  .safe-price .safe-price__card {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .safe-start h2 {
+    font-size: 36px;
+    line-height: 43.2px;
+  }
+}

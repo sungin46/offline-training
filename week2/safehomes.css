@@ -39,6 +39,9 @@ section {
   width: 100%;
   margin: 0 auto 100px;
 }
+section:last-child {
+  margin-bottom: 0;
+}
 section.full_width {
   display: block;
   max-width: 100%;
@@ -102,6 +105,10 @@ section.full_width {
   color: #0e7159;
   font-size: 48px;
   font-weight: 500;
+  word-break: break-all;
+}
+.safe-about h2 strong {
+  word-break: break-all;
 }
 .safe-about button {
   margin-top: 40px;
@@ -124,23 +131,28 @@ section.full_width {
   width: 100%;
 }
 .safe-card img {
-  width: 293px;
+  max-width: 293px;
+  width: 100%;
   margin-bottom: 20px;
 }
 .safe-card .safe-card__desc {
-  width: 293px;
+  max-width: 293px;
+  width: 100%;
   text-align: left;
+  word-break: break-all;
 }
 .safe-card .safe-card__desc strong {
   display: block;
   margin-bottom: 20px;
   font-size: 21px;
   font-weight: 700;
+  letter-spacing: -0.79px;
   word-break: break-all;
 }
 .safe-card .safe-card__desc p {
   color: #6b7684;
   font-size: 16px;
+  line-height: 26px;
   word-break: break-all;
 }
 
@@ -165,4 +177,287 @@ section.full_width {
 }
 .safe-num p {
   color: #6b7684;
+}
+
+/* safe-half */
+.safe-half {
+  display: flex;
+  justify-content: center;
+  padding: 0 40px;
+}
+.safe-half:nth-child(even) {
+  flex-direction: row-reverse;
+}
+.safe-half .safe-half__img,
+.safe-half .safe-half__cont {
+  width: 50%;
+}
+.safe-half .safe-half__img {
+  text-align: center;
+}
+.safe-half .safe-half__cont p.safe-half__h2 {
+  margin-bottom: 20px;
+  color: #0e7159;
+  font-weight: 700;
+}
+.safe-half .safe-half__cont .safe-half__title {
+  display: block;
+  margin-bottom: 34px;
+  color: #333d4b;
+  font-size: 48px;
+  font-weight: 700;
+}
+.safe-half .safe-half__cont p {
+  color: #6b7684;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+/* safe-msg */
+.safe-msg {
+  position: relative;
+  max-width: 451px;
+  width: 100%;
+  margin-bottom: 15px;
+  padding: 10px;
+  background-color: rgba(245, 245, 245, 0.6);
+  border-radius: 13px;
+  box-sizing: border-box;
+}
+.safe-msg.masking {
+  opacity: 0.5;
+}
+.safe-msg .safe-msg__top {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+}
+.safe-msg .safe-msg__top p {
+  font-size: 13px;
+  color: #00000033;
+  line-height: 20px;
+}
+.safe-msg .safe-msg__top p.safe-msg__name img {
+  border-radius: 5px;
+  margin-right: 6px;
+}
+.safe-msg .safe-msg__bottom strong,
+.safe-msg .safe-msg__bottom p {
+  font-size: 15px;
+  word-break: break-all;
+}
+.safe-msg .safe-msg__bottom strong {
+  color: #000;
+  font-weight: 600;
+}
+
+/* safe-price */
+.safe-price {
+  padding: 0 40px;
+  text-align: center;
+}
+.safe-price h2 {
+  margin-bottom: 37px;
+  color: #0e7159;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 58px;
+}
+.safe-price h2 strong {
+  font-weight: 700;
+}
+.safe-price .safe-price__card {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+  margin-bottom: 36px;
+}
+.safe-card.price {
+  align-items: flex-start;
+  padding: 24px;
+  background-color: #f2f3f4;
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+.safe-card.price .safe-card__title {
+  margin-bottom: 28px;
+  color: #333d4b;
+  font-size: 24px;
+  font-weight: 500;
+  text-align: left;
+}
+.safe-card.price .safe-card__desc {
+  max-width: 340px;
+  margin-bottom: 42px;
+  color: #6b7684;
+  line-height: 19.2px;
+  letter-spacing: -0.6px;
+}
+.safe-card.price .safe-card__price {
+  margin-bottom: 15px;
+  color: #0e7159;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 38px;
+}
+.safe-card.price .safe-card__period {
+  margin-bottom: 26px;
+  color: #6b7684;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 19px;
+}
+.safe-card.price button {
+  width: 100%;
+  height: 64px;
+  color: #fff;
+  font-weight: 700;
+  background: #0e7159;
+  border-radius: 8px;
+}
+.safe-price button {
+  padding-right: 15px;
+  color: #0e7159;
+  font-size: 18px;
+  background: url(images/arrow02.svg) no-repeat 100% 50%;
+}
+
+/* safe-review */
+.safe-review {
+  text-align: center;
+  box-sizing: border-box;
+}
+.safe-review h2 {
+  margin-bottom: 37px;
+  color: #0e7159;
+  font-size: 48px;
+  font-weight: 500;
+  line-height: 58px;
+}
+.safe-review button {
+  padding-right: 15px;
+  color: #0e7159;
+  font-size: 18px;
+  background: url(images/arrow02.svg) no-repeat 100% 50%;
+}
+.safe-review__card {
+  position: relative;
+  margin-bottom: 49px;
+  overflow: hidden;
+}
+.safe-review__card::before,
+.safe-review__card::after {
+  position: absolute;
+  content: "";
+  top: 0;
+  width: 126px;
+  height: 100%;
+}
+.safe-review__card::before {
+  left: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.82) 0%,
+    rgba(216, 216, 216, 0.07) 100%
+  );
+}
+.safe-review__card::after {
+  right: 0;
+  background: linear-gradient(
+    270deg,
+    rgba(255, 255, 255, 0.82) 0%,
+    rgba(216, 216, 216, 0.07) 100%
+  );
+}
+.safe-review__card .safe-review__slide {
+  float: left;
+  width: 150%;
+  display: flex;
+  margin-left: -25%;
+}
+.safe-reivew__card .safe-review__slide::after {
+  display: block;
+  content: "";
+  clear: both;
+}
+.safe-card.review {
+  max-width: 680px;
+  align-items: flex-start;
+  margin: 0 40px;
+  padding: 60px;
+  background-color: #f2f3f4;
+  border-radius: 16px;
+  box-sizing: border-box;
+}
+.safe-card.review .safe-card__profile {
+  display: flex;
+  margin-bottom: 33px;
+}
+.safe-card.review .safe-card__profile img {
+  width: 48px;
+  height: 48px;
+  margin-right: 16px;
+  margin-bottom: 0;
+}
+.safe-card.review .safe-card__profile .safe-card__member {
+  color: #6b7684;
+  font-size: 18px;
+  font-weight: 500;
+  text-align: left;
+}
+.safe-card.review .safe-card__profile .safe-card__member strong {
+  color: #000;
+  font-weight: 700;
+}
+.safe-card.review .safe-card__cont {
+  color: #6b7684;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: 32px;
+  letter-spacing: -0.67px;
+  text-align: left;
+}
+
+/* safe-start */
+.safe-start {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 608px;
+  text-align: center;
+  background-color: #0e7159;
+}
+.safe-start h2 {
+  margin-bottom: 60px;
+  padding: 0 20px;
+  color: #fff;
+  font-size: 60px;
+  line-height: 72px;
+}
+.safe-start button {
+  width: 170px;
+  height: 60px;
+  color: #0e7159;
+  font-size: 16px;
+  background: #fff;
+  border-radius: 8px;
+}
+
+/* footer */
+footer {
+  padding: 24px 40px;
+  background: #f9fafb;
+}
+footer strong {
+  display: block;
+  margin-bottom: 18px;
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 19.2px;
+}
+footer small {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 24px;
 }
