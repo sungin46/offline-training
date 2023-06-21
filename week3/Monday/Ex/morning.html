@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="greeting">Hi</h1>
+    <script>
+      let name = "홍성인";
+      let age = 28;
+
+      age = 29;
+
+      document.writeln(name);
+      document.writeln(age);
+
+      // console.log(name);
+      // console.log(age);
+
+      document.getElementById("greeting").innerText = "Hell'o";
+
+      // let a = 10;
+      // let b = 20;
+      // let c = 30;
+
+      // document.write("a =", a);
+      // document.write("b =", b);
+      // document.write("c =", c);
+      // document.write("a + b =", a + b);
+
+      // let name2 = prompt("이름을 입력하세요");
+      // let age2 = prompt("나이를 입력하세요");
+
+      // console.log(name2);
+      // console.log(age2);
+
+      let x, y, z;
+      x = 10;
+      y = 10;
+      z = 30;
+
+      // document.writeln("x > y =", x > y);
+      // document.writeln("x < y =", x < y);
+      // document.writeln("x == y =", x == y);
+
+      // document.writeln("x > y =", $(x > y));
+      // document.writeln("x < y =", x < y);
+      // document.writeln("x == y =", x == y);
+
+      let a = 4;
+      let b = 20;
+      if (a > 3 && a < 5) {
+        console.log(a + b);
+      } else {
+        console.log(a * b);
+      }
+      if (a == 4 || b == 10) {
+        console.log(a * b);
+      }
+      if (a == 4 && b == 20) {
+        console.log(a * b);
+      } else console.log(a % b);
+
+      let person = {
+        name: "HSI",
+        age: 28,
+        height: 180,
+        weight: 63,
+        carrer: { 첫직장: "훌리오", 두번째직장: "양재아이티" },
+        // func: sum,
+      };
+      document.writeln(`제 이름은 ${person.name}입니다 <br>`);
+      document.writeln(`제 나이는 ${person.age}입니다 <br>`);
+      document.writeln(`제 키는 ${person.height}입니다 <br>`);
+
+      let fruit = ["사과", "수박", "복숭아", "딸기", "바나나"];
+      document.write(`과일 : ${fruit} <br>`);
+
+      let pop_fruit = fruit.pop();
+      document.write(`과일 pop : ${pop_fruit} <br>`);
+      document.write(`과일 : ${fruit} <br>`);
+
+      document.write(`과일 push : ${fruit.push(pop_fruit)} <br>`);
+      document.write(`과일 : ${fruit} <br>`);
+
+      let txt = "SOJDNFOJQUNEDOJNopnSdpjfnQOWfnojqewfnoLJn";
+      document.write(`${txt} <br>`);
+      document.write(`${txt.indexOf("w")}<br>`);
+      document.write(`${txt.toLowerCase()}<br>`);
+      document.write(`${txt.toUpperCase()}<br>`);
+    </script>
+  </body>
+</html>

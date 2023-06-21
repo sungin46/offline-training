@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      const strings = ["Hello", " ", "World", "!"];
+      document.writeln(strings.concat());
+
+      let txt = "OEQUNFOjq befojbqweofduBWDOUJQBwdou  qjb dwouq  bdosu  bd";
+      document.write(txt.includes("OEQ"), `<br>`);
+
+      let score = 69;
+      let money = 0;
+
+      // score = prompt("몇점임?");
+      if (score > 90) {
+        document.write(`Good Job! <br>`);
+        money += 10000;
+      } else if (score > 80) {
+        document.write(`Not Bad! <br>`);
+        money += 8000;
+      } else if (score > 70) {
+        document.write(`So So! <br>`);
+        money += 5000;
+      } else {
+        document.write(`Wooooo <br>`);
+        money -= 5000;
+      }
+
+      switch (new Date().getDay()) {
+        case 0:
+          document.write(`일요일입니다.<br>`);
+          break;
+        case 1:
+          document.write(`월요일입니다.<br>`);
+          break;
+        case 2:
+          document.write(`화요일입니다.<br>`);
+          break;
+        case 3:
+          document.write(`수요일입니다.<br>`);
+          break;
+        case 4:
+          document.write(`목요일입니다.<br>`);
+          break;
+        case 5:
+          document.write(`금요일입니다.<br>`);
+          break;
+        case 6:
+          document.write(`토요일입니다.<br>`);
+          break;
+      }
+
+      // 구구단 for문
+      for (let i = 1; i < 10; i++) {
+        for (let j = 1; j < 10; j++) {
+          document.write(`${i} X ${j} = ${i * j}<br>`);
+        }
+        document.write(`<br>`);
+      }
+
+      // foreach문
+      let arr = [10, 20, 30, 40, 50];
+      arr.forEach((e) => console.log(e * 3));
+
+      // map
+      const numbers = [1, 2, 3, 4, 5];
+      const squardNum = numbers.map(function (number) {
+        return number ** 2;
+      });
+      console.log(squardNum);
+
+      function Person(first, last, age) {
+        (this.firstName = first), (this.lastName = last), (this.age = age);
+      }
+    </script>
+  </body>
+</html>
