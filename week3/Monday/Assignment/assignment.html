@@ -10,28 +10,136 @@
         margin: 0;
         padding: 0;
       }
-      header {
+      main {
         width: 100%;
-        height: 300px;
+        height: 700px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
         background-repeat: no-repeat;
         background-position: 50% 50%;
         background-size: cover;
       }
+      main h1 {
+        color: #f7f7f7;
+      }
+      main #clock {
+        color: #f7f7f7;
+      }
+      main #nameWrap {
+        color: #f7f7f7;
+      }
+      main #weather {
+        color: #f7f7f7;
+      }
+      main #todoWrap {
+        margin-top: 30px;
+      }
+      main #todoList {
+        padding: 0;
+        list-style-type: none;
+        color: #f7f7f7;
+        margin: 0;
+      }
     </style>
   </head>
   <body>
-    <header>
+    <main>
+      <div id="weather"></div>
       <h1>과제를 해볼까요?</h1>
-    </header>
+      <h2 id="clock"></h2>
+      <div id="nameWrap">
+        <input type="text" id="name" />
+        <button id="nameBtn" onclick="nameSubmit()">제출</button>
+      </div>
+      <div id="todoWrap">
+        <input type="text" id="todoInput" />
+        <button id="todoBtn" onclick="todoHandler()">추가</button>
+        <ul id="todoList"></ul>
+      </div>
+    </main>
     <script>
       const images = ["bg01.webp", "bg02.webp", "bg03.webp"];
       //random으로 이미지 나타내기
       const chosenImage = images[Math.floor(Math.random() * images.length)];
       // 배경 이미지 넣는 형식 url('img주소')
       const bgImage = `url(images/${chosenImage})`;
-      // header에 추가
-      document.getElementsByTagName("header")[0].style.backgroundImage =
-        bgImage;
+      // main 추가
+      document.getElementsByTagName("main")[0].style.backgroundImage = bgImage;
+
+      // 시계
+      const clock = document.getElementById("clock");
+      const getTime = () => {
+        const date = new Date();
+        const hour = String(date.getHours()).padStart(2, "0");
+        const min = String(date.getMinutes()).padStart(2, "0");
+        const sec = String(date.getSeconds()).padStart(2, "0");
+
+        clock.innerText = `${hour}:${min}:${sec}`;
+      };
+      getTime();
+      setInterval(getTime, 1000);
+
+      // 이름 적기
+      const nameSubmit = () => {
+        const name = document.getElementById("name");
+        const wrapper = document.getElementById("nameWrap");
+        if (name.value != "") {
+          wrapper.innerHTML = `안녕하세요, ${name.value} 님!`;
+        }
+      };
+
+      // To do List
+      const todoHandler = () => {
+        const todoText = document.getElementById("todoInput");
+        const todoValue = todoText.value;
+
+        // 새로운 <li> 요소 생성
+        const newTodoItem = document.createElement("li");
+
+        // 할 일 텍스트를 담을 <span> 요소 생성
+        const todoTextSpan = document.createElement("span");
+        todoTextSpan.textContent = todoValue;
+
+        // 삭제 버튼 생성
+        const deleteButton = document.createElement("button");
+        deleteButton.textContent = "삭제";
+        deleteButton.addEventListener("click", function () {
+          // 삭제 버튼 클릭 시 부모 요소인 <li> 요소 제거
+          this.parentNode.remove();
+        });
+
+        // <li> 요소에 할 일 텍스트와 삭제 버튼 추가
+        newTodoItem.appendChild(todoTextSpan);
+        newTodoItem.appendChild(deleteButton);
+
+        // <ul> 요소에 <li> 요소 추가
+        const todoList = document.getElementById("todoList");
+        todoList.appendChild(newTodoItem);
+
+        // 할 일 입력 필드 초기화
+        todoText.value = "";
+      };
+      // 날씨 API 가져오기
+      const weather = document.getElementById("weather");
+      const weatherApi = () => {
+        navigator.geolocation.getCurrentPosition(async (e) => {
+          console.log(e);
+          const result = await fetch(
+            `https://api.openweathermap.org/data/2.5/weather?lat=${e.coords.latitude}&lon=${e.coords.longitude}&appid=2101f6856f72e0cc8ee7eea63b0805d2&units=metric`
+          )
+            .then((res) => {
+              return res.json();
+            })
+            .then((data) => {
+              // console.log(data);
+              weather.innerText = `${data.main.temp} @ ${data.name}`;
+            });
+          // console.log(result);
+        });
+      };
+      weatherApi();
     </script>
   </body>
 </html>
