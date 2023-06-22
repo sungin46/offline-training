@@ -127,7 +127,7 @@
         navigator.geolocation.getCurrentPosition(async (e) => {
           console.log(e);
           const result = await fetch(
-            `https://api.openweathermap.org/data/2.5/weather?lat=${e.coords.latitude}&lon=${e.coords.longitude}&appid=2101f6856f72e0cc8ee7eea63b0805d2&units=metric`
+            `https://api.openweathermap.org/data/2.5/weather?lat=${e.coords.latitude}&lon=${e.coords.longitude}&appid=API_KEY&units=metric`
           )
             .then((res) => {
               return res.json();
